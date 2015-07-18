@@ -8,7 +8,7 @@ export default Ember.Route.extend({
 	},
 
 	deactivate: function() {
-		var model = this.modelFor('friends/new');
+		var model = this.modelFor('articles/new');
 		if(model.get('isNew')) {
 			model.destroyRecord();
 		}
