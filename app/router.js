@@ -15,7 +15,11 @@ Router.map(function() {
 
     this.route('show', {
       path: ':friend_id'
-    }, function(){ this.resource('articles', function(){});});
+    }, function() {
+      this.resource('articles', function() {
+        this.route('new');
+      });
+    });
   });
 });
 
